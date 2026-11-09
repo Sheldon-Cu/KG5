@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fffaf3">
+<title>Культура гостеприимства — путеводитель</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-section">
+  <div class="wrap header-content">
+    <div class="brand">
+      <img src="assets/logo/Логотип КГ.png" alt="Культура гостеприимства">
+    </div>
+    <div class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">АРТ</div>
+        <div class="hero-tree"><img src="assets/december/Ёлка.webp" alt="Новогодняя ёлка"></div>
+        <div class="hero-text">ЕЛЬ</div>
+      </div>
+    </div>
+    <div class="welcome">
+      <p>Привет! Рады видеть тебя в нашем интерактивном путеводителе.<br>Листай ниже, чтобы узнать, что мы подготовили для тебя этой зимой!</p>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="december">
+  <div class="wrap">
+    <div class="section-wrapper">
+      <div class="section-head">
+        <div class="month-text">ДЕКАБРЬ</div>
+        <div class="month-icon">
+          <img src="assets/december/Замок.webp" alt="Закрытый новогодний замочек">
+        </div>
+        <h2>ПУТЕВОДИТЕЛЬ ПО СПАССКОЙ</h2>
+      </div>
+      <p class="quest-text">Отлично! Квест декабря открыт. Выполняй задания и получи все подарки. <br>Мы приготовили для тебя что-то особенное в каждом нашем заведении!</p>
+      <div class="december-layout">
+        <div class="map-container" style="background: #e5e3df; padding: 0;">
+          <iframe id="yandex-map" src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C%20104&z=17" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position: absolute; top: 0; left: 0; border: none;"></iframe>
+        </div>
+        <div class="location-panel">
+          <div class="location-list" id="locationList">
+            <button class="location active" data-index="0" data-title="Театр кукол" data-address="Киров, улица Володарского, 104"><span class="num">1</span><span><strong>Театр кукол</strong><small>Волшебное место, где оживают сказки.</small><span class="pin">⌖ ул. Володарского, 104</span></span></button>
+            <button class="location" data-index="1" data-title="Театр на Спасской" data-address="Киров, улица Спасская, 17"><span class="num">2</span><span><strong>Театр на Спасской</strong><small>Сердце культурной жизни города.</small><span class="pin">⌖ ул. Спасская</span></span></button>
+            <button class="location" data-index="2" data-title="Художественный музей Васнецовых" data-address="Киров, улица Карла Маркса, 70"><span class="num">3</span><span><strong>Музей Васнецовых</strong><small>Сокровищница русского искусства.</small><span class="pin">⌖ ул. Карла Маркса</span></span></button>
+            <button class="location" data-index="3" data-title="Спасский собор" data-address="Киров, Спасская площадь, 1"><span class="num">4</span><span><strong>Спасский собор</strong><small>Древнейший храм города, хранящий историю.</small><span class="pin">⌖ Спасская площадь</span></span></button>
+            <button class="location" data-index="4" data-title="Фрагмент стены Архиерейского подворья" data-address="Киров, улица Спасская, 4"><span class="num">5</span><span><strong>Архиерейское подворье</strong><small>Исторический архитектурный памятник.</small><span class="pin">⌖ ул. Спасская</span></span></button>
+            <button class="location" data-index="5" data-title="Ворота русского севера" data-address="Киров, набережная Грина"><span class="num">6</span><span><strong>Ворота русского севера</strong><small>Символ гостеприимства и истории края.</small><span class="pin">⌖ набережная Грина</span></span></button>
+            <button class="location" data-index="6" data-title="Вечный огонь" data-address="Киров, Александровский сад"><span class="num">7</span><span><strong>Вечный огонь</strong><small>Дань памяти и уважения героям.</small><span class="pin">⌖ Александровский сад</span></span></button>
+          </div>
+        </div>
+        <div class="location-action" id="locationAction">
+          <p id="locationInfoText">Выбери точку на карте или в списке.</p>
+          <button class="btn-done" id="btnDone" disabled>Отметить как выполненное</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="january">
+  <div class="wrap">
+    <div class="section-wrapper">
+      <div class="section-head">
+        <div class="month-text">ЯНВАРЬ</div>
+        <div class="month-icon"><img src="assets/december/Замок.webp" alt="Замок"></div>
+        <h2>СКИДКИ В НАШИ ЗАВЕДЕНИЯ</h2>
+      </div>
+      <p class="quest-text">Сканируй QR-код и получай бонус в каждом заведении!</p>
+      <div class="coupon-grid">
+        <article class="coupon" data-coupon="СУШИЛКА">
+          <div class="coupon-inner">
+            <div class="coupon-face coupon-front">
+              <div><div class="coupon-title">Скидка в Сушилку</div></div>
+              <button type="button" class="coupon-flip">Перевернуть купон</button>
+            </div>
+            <div class="coupon-face coupon-back">
+              <div class="coupon-back-label">Отсканируй QR-код купона</div>
+              <img class="coupon-qr" src="assets/qr/сушилка.png" alt="QR-код">
+              <button type="button" class="coupon-flip-back">На лицевую сторону</button>
+            </div>
+          </div>
+        </article>
+        <article class="coupon" data-coupon="БАРМУЗЕЙ">
+          <div class="coupon-inner">
+            <div class="coupon-face coupon-front">
+              <div><div class="coupon-title">Настойки в Бармузей Васи Ложкина</div></div>
+              <button type="button" class="coupon-flip">Перевернуть купон</button>
+            </div>
+            <div class="coupon-face coupon-back">
+              <div class="coupon-back-label">Отсканируй QR-код купона</div>
+              <img class="coupon-qr" src="assets/qr/бармузей.png" alt="QR-код">
+              <button type="button" class="coupon-flip-back">На лицевую сторону</button>
+            </div>
+          </div>
+        </article>
+        <article class="coupon" data-coupon="СУЛУГУНИ">
+          <div class="coupon-inner">
+            <div class="coupon-face coupon-front">
+              <div><div class="coupon-title">Десерт в подарок в Сулугуни</div></div>
+              <button type="button" class="coupon-flip">Перевернуть купон</button>
+            </div>
+            <div class="coupon-face coupon-back">
+              <div class="coupon-back-label">Отсканируй QR-код купона</div>
+              <img class="coupon-qr" src="assets/qr/сулугуни.png" alt="QR-код">
+              <button type="button" class="coupon-flip-back">На лицевую сторону</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="february">
+  <div class="wrap">
+    <div class="section-wrapper">
+      <div class="section-head">
+        <div class="month-text">ФЕВРАЛЬ</div>
+        <div class="month-icon"><img src="assets/december/Замок.webp" alt="Замок"></div>
+        <h2>КОНКУРС С ПРИЗАМИ</h2>
+      </div>
+      <p class="quest-text">Участвуй в розыгрыше и выигрывай мерч от Культуры гостеприимства!</p>
+      <div class="prize-area">
+        <div class="prizes">
+          <div class="prize"><img src="assets/prizes/hoodie.webp" alt="Кофта" class="prize-img"><strong>Кофта Культуры гостеприимства</strong></div>
+          <div class="prize"><img src="assets/prizes/thermos.webp" alt="Термокружка" class="prize-img"><strong>Термокружка Культуры гостеприимства</strong></div>
+          <div class="prize"><img src="assets/prizes/shopper.webp" alt="Шопер" class="prize-img"><strong>Шопер Культуры гостеприимства</strong></div>
+          <div class="prize"><img src="assets/prizes/pouch.webp" alt="Кошель" class="prize-img"><strong>Кошель Культуры гостеприимства</strong></div>
+          <div class="prize"><img src="assets/prizes/mug.webp" alt="Кружка" class="prize-img"><strong>Кружка Культуры гостеприимства</strong></div>
+        </div>
+        <a href="https://vk.ru/vacancykgteam" target="_blank" rel="noopener" class="primary">Участвовать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="venues" id="venues">
+  <div class="wrap">
+    <div class="section-wrapper">
+      <div class="section-head"><div class="month-text">НАШИ МЕСТА</div></div>
+      <p class="quest-text">Заглядывай в гости, будем рады видеть тебя!</p>
+      <div class="venues-grid">
+        <a class="venue-card" href="https://vk.ru/sushipizzi" target="_blank" rel="noopener"><img src="assets/venues/Сушилка.jpg" alt="Сушилка"><span>СУШИЛКА</span></a>
+        <a class="venue-card" href="https://vk.ru/barmuzey_yar" target="_blank" rel="noopener"><img src="assets/venues/Бар-музей.jpg" alt="Бар-музей"><span>БАРМУЗЕЙ ВАСИ ЛОЖКИНА</span></a>
+        <a class="venue-card" href="https://vk.ru/dachakirov" target="_blank" rel="noopener"><img src="assets/venues/Дача.jpg" alt="Дача"><span>ДАЧА</span></a>
+        <a class="venue-card" href="https://curcuma-kirov.ru/" target="_blank" rel="noopener"><img src="assets/venues/Куркума.jpg" alt="Куркума"><span>КУРКУМА</span></a>
+        <a class="venue-card" href="https://vk.ru/vkusnoblin" target="_blank" rel="noopener"><img src="assets/venues/Вкусноблин.jpg" alt="Вкусноблин"><span>ВКУСНОБЛИН</span></a>
+        <a class="venue-card" href="https://vk.ru/sulugunikirov" target="_blank" rel="noopener"><img src="assets/venues/Сулугуни.jpg" alt="Сулугуни"><span>СУЛУГУНИ</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo/Логотип КГ.png" alt="Логотип">
+  <p>Культура гостеприимства · Вместе создаём впечатления</p>
+</footer>
+
+<script>
+// ... скрипт без изменений (скопируйте из предыдущего сообщения) ...
+const mapPoints = document.querySelectorAll('.map-point');
+const locationBtns = document.querySelectorAll('.location');
+const infoText = document.getElementById('locationInfoText');
+const btnDone = document.getElementById('btnDone');
+const actionBlock = document.getElementById('locationAction');
+const mapIframe = document.getElementById('yandex-map');
+let activeIndex = -1;
+
+function selectLocation(index) {
+  activeIndex = index;
+  mapPoints.forEach(p => p.classList.remove('active'));
+  locationBtns.forEach(l => l.classList.remove('active'));
+  const point = document.querySelector(`.map-point[data-index="${index}"]`);
+  const locBtn = document.querySelector(`.location[data-index="${index}"]`);
+  if (point) point.classList.add('active');
+  if (locBtn) {
+    locBtn.classList.add('active');
+    locBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  const title = locBtn.getAttribute('data-title');
+  const address = locBtn.querySelector('.pin').textContent.replace('⌖ ', '');
+  const mapAddress = locBtn.getAttribute('data-address');
+  if (mapAddress && mapIframe) {
+    mapIframe.src = `https://yandex.ru/map-widget/v1/?text=${encodeURIComponent(mapAddress)}&z=17`;
+  }
+  infoText.innerHTML = `<strong>Точка №${index + 1}: ${title}</strong><br>Ищи здесь: ${address}`;
+  if (locBtn.classList.contains('done')) {
+    btnDone.textContent = 'Уже выполнено ✓';
+    btnDone.disabled = true;
+  } else {
+    btnDone.textContent = 'Отметить как выполненное';
+    btnDone.disabled = false;
+  }
+  actionBlock.classList.add('visible');
+}
+
+mapPoints.forEach(point => point.addEventListener('click', () => selectLocation(parseInt(point.dataset.index))));
+locationBtns.forEach(btn => btn.addEventListener('click', () => selectLocation(parseInt(btn.dataset.index))));
+
+btnDone.addEventListener('click', () => {
+  if (activeIndex === -1) return;
+  const locBtn = document.querySelector(`.location[data-index="${activeIndex}"]`);
+  const point = document.querySelector(`.map-point[data-index="${activeIndex}"]`);
+  if (!locBtn.classList.contains('done')) {
+    locBtn.classList.add('done');
+    if (point) point.classList.add('done');
+    btnDone.textContent = 'Уже выполнено ✓';
+    btnDone.disabled = true;
+  }
+});
+
+document.querySelectorAll('.coupon').forEach(card => {
+  card.querySelector('.coupon-flip').addEventListener('click', () => card.classList.add('flipped'));
+  card.querySelector('.coupon-flip-back').addEventListener('click', () => card.classList.remove('flipped'));
+});
+</script>
+</body>
+</html>
